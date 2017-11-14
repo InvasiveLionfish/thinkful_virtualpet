@@ -3,6 +3,7 @@ $(function() {
   $('.treat-button').click(clickedTreatButton);
   $('.play-button').click(clickedPlayButton);
   $('.exercise-button').click(clickedExerciseButton);
+  $('.sleep-button').click(clickedSleepButton);
 })
 
   let pet_info = {
@@ -26,6 +27,14 @@ $(function() {
   function clickedExerciseButton() {
     pet_info['happiness']--;
     pet_info['weight']--;
+    checkAndUpdatePetInfoInHtml();
+  }
+
+  // Adding new action "Sleep"
+  function clickedSleepButton() {
+    console.log('You are sleeping');
+    pet_info['happiness']++;
+    pet_info['weight']++;
     checkAndUpdatePetInfoInHtml();
   }
 
