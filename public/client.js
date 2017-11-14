@@ -16,26 +16,29 @@ $(function() {
     pet_info['happiness']++;
     pet_info['weight']++;
     checkAndUpdatePetInfoInHtml();
+    window.alert(`${pet_info['name']} says: Thanks for Feeding Me!`);
   }
 
   function clickedPlayButton() {
     pet_info['happiness']++;
     pet_info['weight']--;
     checkAndUpdatePetInfoInHtml();
+    window.alert(`${pet_info['name']} says: Thanks for playing with me!`);
   }
 
   function clickedExerciseButton() {
     pet_info['happiness']--;
     pet_info['weight']--;
     checkAndUpdatePetInfoInHtml();
+    window.alert(`${pet_info['name']} says: That was exhausting!`);
   }
 
   // Adding new action "Sleep"
   function clickedSleepButton() {
-    console.log('You are sleeping');
     pet_info['happiness']++;
     pet_info['weight']++;
     checkAndUpdatePetInfoInHtml();
+    window.alert(`${pet_info['name']} says: That was refreshing!`);
   }
 
   function checkAndUpdatePetInfoInHtml() {
